@@ -9,10 +9,10 @@ import math
 
 
 try:
-    from teacherRectifiedFlow import UNet as TeacherUNet, RectifiedFlow, SinusoidalPositionEmbeddings as TeacherSinusoidalEmbeddings, AdaGN, ResidualBlock as TeacherResidualBlock, AttentionBlock as TeacherAttentionBlock
-    from fourStepStudent import StudentModel, SinusoidalPositionEmbeddings as StudentSinusoidalEmbeddings, TimeAwareGroupNorm, StudentBlock
+    from Models.teacherRectifiedFlow import UNet as TeacherUNet, RectifiedFlow, SinusoidalPositionEmbeddings as TeacherSinusoidalEmbeddings, AdaGN, ResidualBlock as TeacherResidualBlock, AttentionBlock as TeacherAttentionBlock
+    from Models.fourStepStudent import StudentModel, SinusoidalPositionEmbeddings as StudentSinusoidalEmbeddings, TimeAwareGroupNorm, StudentBlock
 except ImportError as e:
-    st.error(f"Failed to import model definitions. Ensure 'teacherRectifiedFlow.py' and 'fourStepStudent.py' are in the same directory as the Streamlit app. Error: {e}")
+    st.error(f"Failed to import model definitions. Ensure 'teacherRectifiedFlow.py' and 'fourStepStudent.py' are in the Models directory. Error: {e}")
     st.stop()
 
 
@@ -78,8 +78,8 @@ st.markdown("""
 Welcome to the Image Generation interface using Rectified Flow models!
 You can choose between the original **Teacher (U-Net based Rectified Flow)** model or
 the distilled **Student (4-step)** model to generate images.
-The required checkpoint files (`rectified_model_final.pth` for Teacher, `latest.pth` for Student)
-must be in the same directory as this script.
+The required checkpoint files (`teacher_model.pth` for Teacher, `student_model.pth` for Student)
+must be in the Models directory.
 """)
 
 st.sidebar.header("⚙️ Controls")
@@ -92,8 +92,8 @@ else:
     device = torch.device("cpu")
     st.sidebar.info("ℹ️ CUDA not available. Using CPU.")
 
-TEACHER_CHECKPOINT_PATH = "rectified_flow_model_final.pth"
-STUDENT_CHECKPOINT_PATH = "latest.pth"
+TEACHER_CHECKPOINT_PATH = "Weights/teacher_model.pth"
+STUDENT_CHECKPOINT_PATH = "Weights/student_model.pth"
 
 if 'model' not in st.session_state:
     st.session_state.model = None
