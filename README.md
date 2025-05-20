@@ -20,8 +20,7 @@ python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 
 # 2. Clone the repo
-git clone https://github.ecodesamsung.com/SRIB-PRISM/RVCE_24VI48RV_GenAI_One_step_diffusion_model_using_distillation_techniques_for_text_to_image
-cd RVCE_24VI48RV_GenAI_One_step_diffusion_model_using_distillation_techniques_for_text_to_image/CODE/Distillation
+git clone https://github.com/venkat1924/one-step-diffusion-model
 
 # 3. Install dependencies
 pip install -r requirements.txt
