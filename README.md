@@ -62,8 +62,7 @@ python fourStepStudent.py
 streamlit run newStream.py
 ```
 
-
-https://github.ecodesamsung.com/SRIB-PRISM/RVCE_24VI48RV_GenAI_One_step_diffusion_model_using_distillation_techniques_for_text_to_image/assets/32127/96034b49-0a54-4706-8383-f12dab5b2259
+https://github.com/user-attachments/assets/b971e77b-a914-4982-95e0-ba04720f4096
 
 # 📌 NOTE: To put our FID scores in context
 
