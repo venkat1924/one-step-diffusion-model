@@ -30,24 +30,24 @@ pip install -r requirements.txt
 Train the Rectified Flow-based teacher model using:
 
 ```bash
-python teacherRectifiedFlow.py
+python Model/teacherRectifiedFlow.py
 ```
 ### 2️⃣ Generate Noise-Augmented Dataset
 Run the dataset generator script to create noise-augmented samples required for model training:
 
 ```bash
-python generateNoiseSamplesDataset.py
+python Utils/generateNoiseSamplesDataset.py
 ```
 
 ### 3️⃣ Distill Student Model from Teacher
 Use the trained teacher model to distill knowledge into a student model:
 ```bash
-python distillStudentFromRF.py
+python Model/distillStudentFromRF.py
 ```
 ### 4️⃣ (Optional) Four-Step Student Distillation
 For improved student model performance, run the custom four-step distillation strategy:
 ```bash
-python fourStepStudent.py
+python Model/fourStepStudent.py
 ```
 
 # 📊 Architecture Overview
@@ -59,7 +59,7 @@ python fourStepStudent.py
 # How to run Inference?
 ### Use the `streamlit` interface to interact with the trained model, and test both, the Teacher and Student models.
 ```bash
-streamlit run newStream.py
+streamlit run app.py
 ```
 
 https://github.com/user-attachments/assets/b971e77b-a914-4982-95e0-ba04720f4096
