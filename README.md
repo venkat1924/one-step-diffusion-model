@@ -20,7 +20,7 @@ python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 
 # 2. Clone the repo
-git clone https://github.com/venkat1924/one-step-diffusion-model
+git clone https://github.com/venkat1924/One-step-diffusion-Model-for-Image-Generation
 
 # 3. Install dependencies
 pip install -r requirements.txt
